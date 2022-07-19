@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.tukorea.myweb.mapper.ReplyMapper">
+	<!-- 댓글 조회 -->
+<select id="replyList" parameterType="int" resultType="org.tukorea.myweb.domain.ReplyVO">
+    select
+        rno, bno, writer, content, regDate
+    from reply_free
+        where bno = #{bno}        
+</select>
+
+<!-- 댓글 작성 -->
+<insert id="replyWrite" parameterType="org.tukorea.myweb.domain.ReplyVO">
+    insert into reply_free(bno, writer, content)
+        value(#{bno}, #{writer}, #{content})
+</insert>
+    
+<!-- 댓글 수정 -->
+<update id="replyModify" parameterType="org.tukorea.myweb.domain.ReplyVO">
+    update reply_free set
+        writer = #{writer},
+        content = #{content}
+    where rno = #{rno}
+        and bno = #{bno}    
+</update>
+
+<!-- 댓글 삭제 -->
+<delete id="replyDelete" parameterType="org.tukorea.myweb.domain.ReplyVO">
+    delete from reply_free
+    where rno = #{rno}
+        and bno = ${bno}    
+</delete>
+</mapper>

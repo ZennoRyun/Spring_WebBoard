@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.tukorea.myweb.mapper.StudentMapper">
+  
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+     <insert id="insert"> 
+   		insert into student_free (id, passwd, username, snum, depart, mobile, email) values
+ 		(#{id}, #{passwd}, #{username}, #{snum}, #{depart}, #{mobile}, #{email})
+     </insert> 
+ 	
+     <select id="selectByid" resultType="StudentVO">
+ 		select * from student_free where id = #{id}
+     </select>
+ 	
+     <update id="update">
+	 	update student_free set id =#{id}, passwd =#{passwd}, username =#{username}, 
+			snum =#{snum}, depart =#{depart}, mobile =#{mobile}, email =#{email} 
+		 where id = #{id}
+    </update>
+    
+	<!-- 로그인  -->
+	<select id="login" resultType="org.tukorea.myweb.domain.StudentVO">
+		select id, passwd, username
+			from student_free
+		where id=#{id}
+		and passwd=#{passwd}
+	</select>
+	
+	<delete id="withdrawal" parameterType="org.tukorea.myweb.domain.StudentVO">
+		delete from student_free
+		where id=#{id}
+	</delete>
+	
+</mapper>  
