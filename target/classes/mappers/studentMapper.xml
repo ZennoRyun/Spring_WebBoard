@@ -38,5 +38,4 @@
 		delete from student_free
 		where id=#{id}
 	</delete>
-	
 </mapper>  
