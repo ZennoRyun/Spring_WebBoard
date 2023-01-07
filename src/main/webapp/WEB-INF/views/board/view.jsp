@@ -38,12 +38,12 @@
 						<td colspan="2"><fmt:formatDate value="${view.regDate}" pattern="a hh:mm:ss" /></td>
 					</tr>
 					<tr>
-						<td>내용</td>
-						<td colspan="2" style="min-height: 200px; text-align: center;">${view.content}</td>
-					</tr>
-					<tr>
 						<td>조회수</td>
 						<td colspan="2">${view.viewCnt}</td>
+					</tr>
+					<tr>
+						<td>내용</td>
+						<td colspan="2" style="min-height: 200px; text-align: center;">${view.content}</td>
 					</tr>
 				</tbody>
 
