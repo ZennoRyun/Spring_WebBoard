@@ -91,7 +91,7 @@
 		</p>
 		<p>
 			<input type="hidden" name="bno" value="${view.bno}">
-			<button type="submit">댓글 작성</button>
+			<button type="submit">작성</button>
 		</p>
 	</form>
 	

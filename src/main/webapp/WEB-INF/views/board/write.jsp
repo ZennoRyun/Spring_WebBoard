@@ -43,8 +43,8 @@
 					</tbody>
 					
 				</table>
-				<input type="submit" class="btn btn-primary pull-right" value="작성">
-				<input type="button" onclick="location.href='/myweb/board/listPageSearch?num=1'" class="btn btn-primary pull-right" value="취소">
+				<input type="submit" class="btn btn-primary" value="작성">
+				<input type="button" onclick="location.href='/myweb/board/listPageSearch?num=1'" class="btn btn-primary" value="취소">
 			</form>
 		</div>
 	</div>
