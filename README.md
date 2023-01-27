@@ -19,7 +19,7 @@
 <br>
 
 ## :movie_camera: Project Scenario
-![웹 게시판 시나리오](https://user-images.githubusercontent.com/81897623/214774979-f34281cc-95f3-4e50-b61e-47a2b1621777.PNG)
+![웹 게시판 시나리오](https://user-images.githubusercontent.com/81897623/215169716-e22f50f3-26bf-4fba-928d-711a7b953937.PNG)
 <br>
 
 ## :running: Run server
